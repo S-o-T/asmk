@@ -5,15 +5,9 @@
 %
 % Authors: G. Tolias, Y. Avrithis, H. Jegou. 2013. 
 %
-% download yael
-if ~exist('yael') 
-  system('wget https://gforge.inria.fr/frs/download.php/file/34218/yael_matlab_linux64_v438.tar.gz');
-  system('mkdir yael');
-  system('tar -C yael/ -zxvf yael_matlab_linux64_v438.tar.gz');
-end
 addpath('yael');
 % download required data
-if ~exist('data') 
+if ~exist('./data') 
   system('wget -nH --cut-dirs=4 -r -Pdata/ ftp://ftp.irisa.fr/local/texmex/corpus/iccv2013/');
 end
 
