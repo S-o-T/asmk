@@ -14,8 +14,10 @@ nmax = inf;
 
 % Default
 Y = [];
-if ~exist('verbose'), verbose = false; end;
-if ~exist('bounds'),
+if ~exist('verbose')
+    verbose = false;
+end
+if (exist('bounds') ~= 1)
   nmin = 1;
   nmax = inf;
 elseif size (bounds, 2) == 2
